@@ -1,0 +1,15 @@
+.card img {
+  width: 100%;
+}
+#topCard {
+  padding: 0;
+}
+#smallCard {
+  padding: 0;
+}
+#wellCard {
+  margin-top: 10px;
+}
+.deleteForm {
+  display: inline;
+}
