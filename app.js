@@ -18,10 +18,9 @@ var commentRoutes = require("./routes/comments"),
 //Set up environment
 mongoose.set("useUnifiedTopology", true);
 mongoose
-  .connect(process.env.DATABASEURL);
-    //"mongodb+srv://admin:admin@cluster0-x19h2.mongodb.net/test?retryWrites=true&w=majority",
-    { useNewUrlParser: true, useCreateIndex: true }
-  )
+  .connect(process.env.DATABASEURL, {
+    useCreateIndex: true
+  })
   .then(() => {
     console.log("Connected");
   })
