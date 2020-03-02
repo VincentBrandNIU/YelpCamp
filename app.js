@@ -10,7 +10,7 @@ var passport = require("passport");
 var LocalStrategy = require("passport-local");
 var User = require("./models/user");
 var methodOverride = require("method-override");
-
+//https://fierce-stream-73941.herokuapp.com/
 var commentRoutes = require("./routes/comments"),
   campgroundRoutes = require("./routes/campgrounds"),
   authRoutes = require("./routes/index");
@@ -18,8 +18,8 @@ var commentRoutes = require("./routes/comments"),
 //Set up environment
 mongoose.set("useUnifiedTopology", true);
 mongoose
-  .connect(
-    "mongodb+srv://admin:admin@cluster0-x19h2.mongodb.net/test?retryWrites=true&w=majority",
+  .connect(process.env.DATABASEURL);
+    //"mongodb+srv://admin:admin@cluster0-x19h2.mongodb.net/test?retryWrites=true&w=majority",
     { useNewUrlParser: true, useCreateIndex: true }
   )
   .then(() => {
