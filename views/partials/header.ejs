@@ -30,13 +30,14 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end">
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarSupportedContent"
+      >
         <ul class="navbar-nav">
           <% if(!currentUser){ %>
           <li class="nav-item">
-            <a class="nav-link" id="navbarSupportedContent" href="/login"
-              >Login</a
-            >
+            <a class="nav-link" href="/login">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/register">Sign Up</a>
