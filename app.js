@@ -63,6 +63,6 @@ app.use((req, res, next) => {
 app.use(authRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
-app.listen(process.env.PORT || 5000), () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("Yelp camp server started!!!");
 });
