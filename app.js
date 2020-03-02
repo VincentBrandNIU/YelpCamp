@@ -17,7 +17,17 @@ var commentRoutes = require("./routes/comments"),
 
 //Set up environment
 mongoose.set("useUnifiedTopology", true);
-mongoose.connect("mongodb://localhost/yelp_camp", { useNewUrlParser: true });
+mongoose
+  .connect(
+    "mongodb+srv://admin:admin@cluster0-x19h2.mongodb.net/test?retryWrites=true&w=majority",
+    { useNewUrlParser: true, useCreateIndex: true }
+  )
+  .then(() => {
+    console.log("Connected");
+  })
+  .catch(err => {
+    console.log("Error:", err.message);
+  });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
