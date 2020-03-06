@@ -33,7 +33,7 @@ router.post("/", middleware.isLoggedIn, (req, res) => {
           var newDate = Date();
 
           //Add date time to comment
-          comment.datePosted = newDate;
+          comment.author.datePosted = newDate;
           //add Username and id to comment
           comment.author.id = req.user._id;
           comment.author.username = req.user.username;
