@@ -14,7 +14,7 @@ var methodOverride = require("method-override");
 var commentRoutes = require("./routes/comments"),
   campgroundRoutes = require("./routes/campgrounds"),
   authRoutes = require("./routes/index");
-
+var seedDB = require("./seeds.js");
 //Set up environment
 mongoose.set("useUnifiedTopology", true);
 mongoose
