@@ -30,7 +30,7 @@ router.post("/", middleware.isLoggedIn, (req, res) => {
         if (err) {
           console.log(err);
         } else {
-          var newDate = new Date(now);
+          var newDate = Date();
 
           //Add date time to comment
           comment.datePosted = newDate;
