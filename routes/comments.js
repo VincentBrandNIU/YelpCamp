@@ -30,6 +30,11 @@ router.post("/", middleware.isLoggedIn, (req, res) => {
         if (err) {
           console.log(err);
         } else {
+          var newDate = new Date();
+          var datetime =
+            "LastSync: " + newDate.today() + " @ " + newDate.timeNow();
+          //Add date time to comment
+          comment.datePosted = datetime;
           //add Username and id to comment
           comment.author.id = req.user._id;
           comment.author.username = req.user.username;

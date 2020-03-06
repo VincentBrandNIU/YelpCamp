@@ -7,7 +7,8 @@ var commentSchema = new mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
       ref: "User"
     },
-    username: String
+    username: String,
+    datePosted: Date
   }
 });
 module.exports = mongoose.model("Comment", commentSchema);
