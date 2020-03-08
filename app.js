@@ -19,6 +19,7 @@ var seedDB = require("./seeds.js");
 mongoose.set("useUnifiedTopology", true);
 mongoose
   .connect(process.env.DATABASEURL, {
+    // -replace when publishing
     useCreateIndex: true
   })
   .then(() => {
@@ -34,7 +35,7 @@ app.use(methodOverride("_method"));
 
 app.set("view engine", "ejs");
 app.use(flash());
-seedDB();
+//seedDB();
 
 // Passport configuration
 app.use(
